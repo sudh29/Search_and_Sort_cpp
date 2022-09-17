@@ -32,7 +32,7 @@ class Solution{
             }
         }
         for(auto it=st1.begin();it!=st1.end();it++){
-            res.push_back(*it)
+            res.push_back(*it);
         }
         return res;
     }
