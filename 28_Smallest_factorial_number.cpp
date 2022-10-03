@@ -17,15 +17,14 @@ class Solution
             int ans;
             while(low<=high){
                 int ans=findTrailingZeros(mid);
-                int curr=mid;
-                if (ans>n){
-                    high=mid-1;
-                }
-                if(ans<n){
-                    low=mid+1;
-                }
                 if(ans==n){
                     return (mid/5)*5;
+                }
+                else if (ans>n){
+                    high=mid-1;
+                }
+                else{
+                    low=mid+1;
                 }
                 mid=low+(high-low)/2;
             }
